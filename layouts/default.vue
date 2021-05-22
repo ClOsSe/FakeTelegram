@@ -1,7 +1,7 @@
 <template>
-  <v-app> 
+  <v-app > 
     <Header></Header>
-    <nuxt />
+    <Nuxt />
   </v-app>
 </template>
 
@@ -14,3 +14,6 @@ export default {
   },
 }
 </script>
+<style lang="scss" scoped>
+
+</style>

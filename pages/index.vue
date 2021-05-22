@@ -1,6 +1,8 @@
 <template>
  <v-container>
-   
+   <v-card>
+     <p>test</p>
+   </v-card>
  </v-container>
 </template>
 
