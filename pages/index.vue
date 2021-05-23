@@ -75,7 +75,7 @@ export default {
           index:1,
           avatarURL:"https://picsum.photos/1920/1080?random",
           title:'programers',
-          content:'hello',
+          content:'most important things',
           date:'Tue',
           unReadMessage:10,
           muted:false,
@@ -84,8 +84,8 @@ export default {
         { 
           index:2,
           avatarURL:"https://picsum.photos/1920/1080?random",
-          title:'programers',
-          content:'hello',
+          title:'Family',
+          content:'salam be hame',
           date:'Tue',
           unReadMessage:10,
           muted:false,
@@ -97,7 +97,7 @@ export default {
           index: 0,
           avatarURL:"https://picsum.photos/1920/1080?random",
           title:'Musix',
-          content:'نگو پول نگو تحصیلات ',
+          content:'ahang jadid shadmehr aghili ',
           date:'4 Aug 2020',
           unReadMessage:10,
           muted:true,
@@ -116,9 +116,9 @@ export default {
         { 
           index: 2,
           avatarURL:"https://picsum.photos/1920/1080?random",
-          title:'Musix',
-          content:'نگو پول نگو تحصیلات ',
-          date:'4 Aug 2020',
+          title:'Movie',
+          content:'topgun',
+          date:'today',
           unReadMessage:10,
           muted:false,
           mdiIcons:'mdi-account-multiple'
@@ -145,6 +145,9 @@ export default {
       var counter = 0;
       for(var i in this.contact){counter ++;}
       this.AllChats = counter;
+      counter = 0;
+      for(var j in this.PinToTopList){counter ++;}
+      this.AllChats +=counter;
     }
   },
   components: {
