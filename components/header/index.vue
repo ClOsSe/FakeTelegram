@@ -34,12 +34,18 @@
 
       </div>
       <v-list  nav danse>
-        <span id="fade" :class="show_useracounts ? 'opacity-100' : 'opacity-0'">
+        <span  :class="show_useracounts ? 'opacity-100' : 'opacity-0'">
         <v-list-item-group  v-for="(account,index) in user_acccount" :key="index" :class="['user-accounts',show_useracounts ? 'min-height' : '']" >
             <v-list-item-icon style="margin:0;" class="ma-0 pa-0">
                 <v-img class="ml-2 user-account-avatars pa-0 ma-0" rounded width="40" height="40" src="https://picsum.photos/1920/1080?random"></v-img>
                 <v-list-item-title class="user-account-username pa-0 ma-0 ml-1">{{account.name}}</v-list-item-title>
             </v-list-item-icon>
+        </v-list-item-group>
+        <v-list-item-group class="d-flex ml-3" :class="['user-accounts',show_useracounts ? 'min-height' : '']">
+          <v-list-item-icon>
+            <v-icon>mdi-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title class="user-account-username pa-0 ma-0 ml-1">Add Account</v-list-item-title>
         </v-list-item-group>
         </span>
       </v-list>
@@ -74,6 +80,13 @@ export default({
         { title: 'Click Me 2' },
       ],
     }),
+    // this watch will close user accounts after closing side panel
+
+    // watch: {
+    //   drawer: function () {
+    //     !this.drawer ? this.show_useracounts = false : "";
+    //   },
+    // },
 })
 </script>
 <style lang="scss" scoped>

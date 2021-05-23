@@ -53,3 +53,11 @@
           </v-list-item-group>
         </v-list>
 </template>
+<script>
+
+export default ({
+  data: () => ({
+      group: null,
+    }),
+})
+</script>
