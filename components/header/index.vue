@@ -8,8 +8,8 @@
       <!-- <template > -->
         <v-tabs align-with-title color="#fff">
           <v-spacer></v-spacer>
-          <v-tab class="justify-center">CHATS</v-tab>
-          <v-tab class="justify-center">CALLS</v-tab>
+          <v-tab class="justify-center"><NuxtLink class="router-link" color="#fff"  to="/">CHATS</NuxtLink></v-tab>
+          <v-tab class="justify-center"><NuxtLink class="router-link" color="#fff"  to="/calls">CALLS</NuxtLink></v-tab>
           <v-spacer></v-spacer>
           <v-icon class="pa-3">mdi-magnify</v-icon>
         </v-tabs>
@@ -101,6 +101,11 @@ export default({
     width: 100%;
     background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.6));
   }
+}
+.router-link{
+    text-decoration: none;
+    color: #fff;
+
 }
   .user-account-avatars{
     border-radius: 50%;
