@@ -11,9 +11,9 @@
                  <h4>{{item.title}}</h4>
                  <v-icon v-show="item.muted" class="icons">mdi-volume-variant-off</v-icon>
                </div>
-               <div class="d-flex ma-0 pa-0">
+               <div class="content-parent d-flex ma-0 pa-0">
                  <v-icon class="icons mt-1">{{item.mdiIcons}}</v-icon>
-                 <p>{{item.content}}</p>
+                 <p class="content">{{item.content}}</p>
                </div>
              </div>
              <div class="col-2 ma-0 pa-0 information-date">
@@ -32,9 +32,9 @@
             <h4>{{item.title}}</h4>
             <v-icon v-show="item.muted" class="icons">mdi-volume-variant-off</v-icon>
           </div>
-          <div class="d-flex ma-0 pa-0">
+          <div class="content-parent d-flex ma-0 pa-0">
             <v-icon class="icons mt-1">{{item.mdiIcons}}</v-icon>
-            <p>{{item.content}}</p>
+            <p class="content">{{item.content}}</p>
           </div>
         </div>
         <div class="col-2 ma-0 pa-0 information-date">
@@ -97,7 +97,7 @@ export default {
           index: 0,
           avatarURL:"https://picsum.photos/1920/1080?random",
           title:'Musix',
-          content:'ahang jadid shadmehr aghili ',
+          content:'ahang jadid shadmehraghiliahang jadid shadmehr aghili  ahang jadid shadmehr aghili ',
           date:'4 Aug 2020',
           unReadMessage:10,
           muted:true,
@@ -177,6 +177,15 @@ export default {
     .date{
       font-size: 12px;
       color:darkgray
+    }
+  }
+  .content-parent
+  {
+    max-height: 20px;
+    overflow: hidden;
+    .content{
+      white-space: nowrap;
+      font-size: 14px;
     }
   }
 }
