@@ -8,10 +8,10 @@
       <!-- <template > -->
         <v-tabs align-with-title color="#fff">
           <v-spacer></v-spacer>
-          <NuxtLink class=" justify-center router-link" color="#fff"  to="/"><v-tab class="justify-center router-link">CHATS</v-tab></NuxtLink>
-          <NuxtLink class=" justify-center router-link" color="#fff"  to="/calls"><v-tab class="justify-center router-link">CALLS</v-tab></NuxtLink>
+          <NuxtLink class="justify-center router-link" color="#fff"  to="/"><v-tab class="justify-center router-link">CHATS</v-tab></NuxtLink>
+          <NuxtLink class="justify-center router-link" color="#fff"  to="/calls"><v-tab class="justify-center router-link">CALLS</v-tab></NuxtLink>
           <v-spacer></v-spacer>
-          <v-icon class="pa-3">mdi-magnify</v-icon>
+          <NuxtLink class="justify-center router-link" to="/search"><v-icon class="pa-3">mdi-magnify</v-icon></NuxtLink>
         </v-tabs>
       <!-- </template> -->
     </v-app-bar>

@@ -3,17 +3,20 @@
     <div>
         <v-row class="d-block" v-for="(item,index) in CallsList" :key="index">
             <h3 class="date pa-2 ma-2">{{item.date}}</h3>
-            <v-card class="ml-2 mr-2 pa-0">
-                <v-row class="pa-1">
+            <v-card  class="pa-0 pl-1">
+                <v-row class="pa-1 pb-0">
                     <div class="col-2 pa-0">
                         <v-img height="62" width="62" class="avatar" :src="item.avatarURL"></v-img>
                     </div>
-                    <div class="col-7 content-parent d-flex">
-                        <h4>{{item.username}}</h4>
-                        <v-icon :color="item.status != 'Canceled' ? 'success' : 'red'" >{{item.mdiIcons}}</v-icon>
+                    <div class="col-7 pa-1 ml-1  content-parent ">
+                        <h4 class="">{{item.username}}</h4>
+                        <div class="d-flex">
+                            <v-icon :color="item.status != 'Canceled' ? 'success' : 'red'" >{{item.mdiIcons}}</v-icon>
+                            <p  class="statusCall">{{item.statusCall}}</p>
+                        </div>
                     </div>
-                    <div class="col-2 ma-0 pa-0">
-                        <p>{{item.time}}</p>
+                    <div class="time  col-2 mt-3 pa-0">
+                        <p style="text-align:end">{{item.time}}</p>
                     </div>
                 </v-row>
             </v-card>
@@ -48,7 +51,7 @@ export default ({
                     date: '10 March 2019',
                     avatarURL:'https://picsum.photos/1920/1080?random',
                     username:'mr.davari',
-                    status:'Canceled',
+                    status:'success',
                     statusCall:'Outgoing',
                     mdiIcons:'mdi-arrow-top-right',
                     time:'10:16'
@@ -74,5 +77,19 @@ export default ({
 }
 .date{
     font-size: 14px;
+}
+.time{
+    font-size: 12px;
+    color: darkgray;
+}
+
+.content-parent{
+    .v-icon{
+        margin-top: -0.8em;
+    }
+    .statusCall{
+        font-size: 14px;
+        color: darkgray;
+    }
 }
 </style>
