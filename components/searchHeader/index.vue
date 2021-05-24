@@ -1,14 +1,14 @@
 <template>
 <div>
   <div class="mx-auto overflow-hidden main-header " height="100vh" flat>
-    <v-system-bar height="30" color='#1f1f1c'></v-system-bar>
-    <v-app-bar color="#393A3C" class="d-flex" height="57px" dark flat>
+    <v-system-bar height="30" color='#121212'></v-system-bar>
+    <v-app-bar color="#1E1E1E" class="d-flex" height="57px" dark flat>
         <div class="nav-parent d-flex">
         <NuxtLink class="router-link" to="/"><v-icon >mdi-arrow-left</v-icon></NuxtLink>
         <v-row>
             <v-col>
                 <div class="mt-7" >
-                    <v-text-field placeholder="Search" outlined ></v-text-field>
+                    <v-text-field class="custom"  flat solo placeholder="Search" ></v-text-field>
                 </div>    
             </v-col>
         </v-row>
@@ -35,4 +35,6 @@ export default ({
     display: inline-flex;
     letter-spacing: normal;
   }
+
+ 
 </style>
