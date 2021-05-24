@@ -1,8 +1,8 @@
 <template>
    <v-card width="100%">
-     <v-app>
+     <v-app class="">
       <v-card v-show="PinToTop" class="col-12 pa-0 ma-0" >
-        <v-row  class="users-group-item pin-to-top col-12 d-flex ml-2 mt-2"  v-for="(item,index) in PinToTopList" :key="index" >
+        <v-row  class="users-group-item pin-to-top col-12 d-flex  mt-2"  v-for="(item,index) in PinToTopList" :key="index" >
              <div class="col-2  pa-0">
                <v-img class="users-group-avatar justify-center " :src="item.avatarURL" ></v-img>
              </div>
@@ -23,7 +23,7 @@
         </v-row>
       </v-card>
       <v-card class="col-12 pa-0 ma-0 mt-2">
-        <v-row  class="users-group-item  col-12 d-flex ml-2 mt-2" v-for="(item,index) in contact" :key="index">
+        <v-row  class="users-group-item  col-12 d-flex  mt-2" v-for="(item,index) in contact" :key="index">
         <div class="col-2  pa-0">
           <v-img class="users-group-avatar justify-center " :src="item.avatarURL" ></v-img>
         </div>
