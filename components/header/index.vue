@@ -22,7 +22,7 @@
         <v-img height="100%"  src="https://picsum.photos/1920/1080?random"></v-img>
       </v-card>
       <div @click="show_useracounts = !show_useracounts" class="user-account-name pl-6 m-auto">
-        <div>
+        <div :class="$vuetify.theme.dark ? '' : 'light'">
           <div class="d-flex">
             <h5 class="justify-start">{{username}}</h5>
             <v-spacer></v-spacer>
@@ -34,18 +34,18 @@
 
       </div>
       <v-list  nav danse>
-        <span  :class="show_useracounts ? 'opacity-100' : 'opacity-0'">
+        <span  :class="show_useracounts ? 'opacity-100' : 'opacity-0'" >
         <v-list-item-group  v-for="(account,index) in user_acccount" :key="index" :class="['user-accounts',show_useracounts ? 'min-height' : '']" >
             <v-list-item-icon style="margin:0;" class="ma-0 pa-0">
                 <v-img class="ml-2 user-account-avatars pa-0 ma-0" rounded width="40" height="40" src="https://picsum.photos/1920/1080?random"></v-img>
-                <v-list-item-title class="user-account-username pa-0 ma-0 ml-1">{{account.name}}</v-list-item-title>
+                <v-list-item-title class="user-account-username pa-0 ma-0 ml-1" >{{account.name}}</v-list-item-title>
             </v-list-item-icon>
         </v-list-item-group>
         <v-list-item-group class="d-flex ml-3" :class="['user-accounts',show_useracounts ? 'min-height' : '']">
-          <v-list-item-icon>
-            <v-icon>mdi-plus</v-icon>
+          <v-list-item-icon class="pl-0 ml-0">
+          <NuxtLink class="router-link" to="/addaccount"><v-icon>mdi-plus</v-icon></NuxtLink>
           </v-list-item-icon>
-          <v-list-item-title class="user-account-username pa-0 ma-0 ml-1">Add Account</v-list-item-title>
+          <NuxtLink class="router-link" :class="$vuetify.theme.dark ? 'light' : 'dark'" to="/addaccount"><v-list-item-title class="user-account-username pa-0 ma-0 ml-1" >Add Account</v-list-item-title></NuxtLink>
         </v-list-item-group>
         </span>
       </v-list>
@@ -67,9 +67,9 @@ export default({
       group: null,
       show_useracounts:false,
       user_acccount:[
-        {name:'mohammad Goudarzi1'},
-        {name:'mohammad Goudarzi2'},
-        {name:'mohammad Goudarzi3'},
+        {name:'mr_ceh'},
+        {name:'mohammad Goudarzi'},
+        {name:'mohammad'},
       ],
       username:'Mohammad Goudarzi',
       user_tell:"+98 903 399 2048",
@@ -131,5 +131,11 @@ export default({
 .opacity-100{
     opacity: 1;
     transition: 2s;
+}
+.light{
+  color: #fff;
+}
+.dark{
+  color: #0000;
 }
 </style>
